@@ -1,0 +1,99 @@
+:root {
+    --font-family: Arial, sans-serif;
+    --margin: 20px;
+    --padding: 10px;
+    --border-color: #ccc;
+    --button-bg-color: #007bff;
+    --button-text-color: #fff;
+    --button-hover-bg-color: #0056b3;
+    --focus-outline-color: #0056b3;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: var(--margin);
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: var(--margin);
+    width: 100%;
+}
+
+th, td {
+    padding: var(--padding);
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    text-align: left;
+}
+
+td input[type="time"] {
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+button:focus {
+    outline: 2px solid var(--focus-outline-color);
+    outline-offset: 2px;
+}
+
+#result {
+    margin-top: var(--margin);
+    font-weight: bold;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+nav {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}

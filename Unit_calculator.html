@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Healthcare Unit Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="unit_calculator.html">Unit Calculator</a></li>
+            <li><a href="revenue_calculator.html">Revenue Calculator</a></li>
+            <li><a href="time_tracker.html">Time Tracker</a></li>
+        </ul>
+    </nav>
+    <h1>Healthcare Unit Calculator</h1>
+    <form id="unitForm">
+        <table id="timeTable" aria-label="Time Entries Table">
+            <thead>
+                <tr>
+                    <th scope="col">Start Time</th>
+                    <th scope="col">End Time</th>
+                    <th scope="col">Break Time (minutes)</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="startTime-1" class="sr-only">Start Time</label>
+                        <input type="time" id="startTime-1" name="startTime[]" aria-label="Start Time">
+                    </td>
+                    <td>
+                        <label for="endTime-1" class="sr-only">End Time</label>
+                        <input type="time" id="endTime-1" name="endTime[]" aria-label="End Time">
+                    </td>
+                    <td>
+                        <label for="breakTime-1" class="sr-only">Break Time (minutes)</label>
+                        <input type="number" id="breakTime-1" name="breakTime[]" aria-label="Break Time" min="0" value="0">
+                    </td>
+                    <td>
+                        <button type="button" class="remove-btn" aria-label="Remove this time entry">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" id="addRowBtn">Add Row</button>
+        <button type="button" id="calculateBtn">Calculate Units</button>
+    </form>
+    <div id="result" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+</html>
